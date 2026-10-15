@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Proyecto Maven del módulo de Gestión de Proyectos (JDBC).
+    Autores: Roycer Cervantes y Sebastián Rodríguez
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>co.edu.sena.impactoambiental</groupId>
+    <artifactId>plataforma-impacto-ambiental-jdbc</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+
+    <name>Plataforma Impacto Ambiental - Modulo Proyectos (JDBC)</name>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <exec.mainClass>co.edu.sena.impactoambiental.Main</exec.mainClass>
+    </properties>
+
+    <dependencies>
+        <!-- Driver JDBC oficial de MySQL -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>8.4.0</version>
+        </dependency>
+    </dependencies>
+</project>
