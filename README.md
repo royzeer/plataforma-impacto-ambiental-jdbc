@@ -1,4 +1,13 @@
 # Plataforma Digital Integral para la Gestión de Proyectos de Impacto Ambiental
+
+[![Build](https://github.com/royzeer/plataforma-impacto-ambiental-jdbc/actions/workflows/build.yml/badge.svg)](https://github.com/royzeer/plataforma-impacto-ambiental-jdbc/actions/workflows/build.yml)
+![Java 17](https://img.shields.io/badge/Java_17-ED8B00?logo=openjdk&logoColor=white)
+![JDBC](https://img.shields.io/badge/JDBC-4479A1?logo=mysql&logoColor=white)
+![MySQL 8](https://img.shields.io/badge/MySQL_8-4479A1?logo=mysql&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-C71A36?logo=apachemaven&logoColor=white)
+![licencia MIT](https://img.shields.io/badge/licencia_MIT-blue?logo=opensourceinitiative&logoColor=white)
+
+> *English summary at the [end of this file](#english-summary).*
 ## Módulo: Gestión de Proyectos (Java + JDBC + MySQL)
 
 **Evidencia:** GA7-220501096-AA2-EV01 — Codificación de módulos del software
@@ -79,3 +88,15 @@ espacios, comentarios Javadoc en cada clase, `try-with-resources` para cerrar co
 - Presupuesto numérico y no negativo.
 - Nombre de proyecto único (lo controla la BD y el programa muestra un mensaje amable).
 - Confirmación antes de eliminar.
+
+---
+
+## English summary
+
+Console application in Java that implements the **project management core** of the platform: insert, list, search by id or name, update and delete environmental projects stored in MySQL.
+
+**Highlights:** layered design (model → DAO interface and implementation → console view), plain JDBC (`DriverManager`, `PreparedStatement`, `ResultSet`), input validation (required fields, dates, non-negative budget, unique name) and delete confirmation.
+
+**Tech stack:** Java 17 · JDBC (`mysql-connector-j`) · MySQL 8 · Maven · GitHub Actions.
+
+**Run it:** run `database/script_bd.sql`, set your MySQL credentials in `src/main/resources/db.properties`, then `mvn compile exec:java`.
